@@ -15,6 +15,7 @@ import { initializeDatabase } from './database/seeds/init.seed';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: '.env',
     }),
     TypeOrmModule.forRoot({
       type: 'better-sqlite3',
