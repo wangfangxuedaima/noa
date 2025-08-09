@@ -46,20 +46,8 @@ services:
     networks:
       - nestjs-network
 
-  # Redis缓存服务（可选）- 暂时注释掉
-  # redis:
-  #   image: redis:7-alpine
-  #   ports:
-  #     - "6379:6379"
-  #   volumes:
-  #     - redis_data:/data
-  #   restart: unless-stopped
-  #   networks:
-  #     - nestjs-network
-
 volumes:
   mysql_data:
-  # redis_data:
 
 networks:
   nestjs-network:
