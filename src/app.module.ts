@@ -6,9 +6,11 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/users/users.module';
 import { RolesModule } from './modules/roles/roles.module';
 import { FilesModule } from './modules/files/files.module';
+import { PublicModule } from './modules/public/public.module';
 import { User } from './modules/users/entities/user.entity';
 import { Role } from './modules/roles/entities/role.entity';
 import { File } from './modules/files/entities/file.entity';
+import { PublicItem } from './modules/public/entities/public-item.entity';
 import { initializeDatabase } from './database/seeds/init.seed';
 
 @Module({
@@ -20,7 +22,7 @@ import { initializeDatabase } from './database/seeds/init.seed';
     TypeOrmModule.forRoot({
       type: 'better-sqlite3',
       database: 'noa.db',
-      entities: [User, Role, File],
+      entities: [User, Role, File, PublicItem],
       synchronize: true,
       logging: process.env.NODE_ENV === 'development',
     }),
@@ -28,6 +30,7 @@ import { initializeDatabase } from './database/seeds/init.seed';
     UsersModule,
     RolesModule,
     FilesModule,
+    PublicModule,
   ],
 })
 export class AppModule implements OnModuleInit {

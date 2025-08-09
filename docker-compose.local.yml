@@ -7,46 +7,18 @@ services:
       context: .
       dockerfile: Dockerfile.local
     ports:
-      - "3000:3000"
+      - "8080:3000"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
       - PORT=3000
       - JWT_SECRET=your-super-secret-jwt-key-here-docker
       - JWT_EXPIRES_IN=7d
-      - DB_HOST=mysql
-      - DB_PORT=3306
-      - DB_USERNAME=nestjs
-      - DB_PASSWORD=nestjs123
-      - DB_DATABASE=nestjs_api
-    depends_on:
-      mysql:
-        condition: service_healthy
-    restart: unless-stopped
-    networks:
-      - nestjs-network
-
-  # MySQL数据库服务
-  mysql:
-    image: mysql:8.0
-    environment:
-      - MYSQL_ROOT_PASSWORD=root123
-      - MYSQL_DATABASE=nestjs_api
-      - MYSQL_USER=nestjs
-      - MYSQL_PASSWORD=nestjs123
-    ports:
-      - "3306:3306"
     volumes:
-      - mysql_data:/var/lib/mysql
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      timeout: 20s
-      retries: 10
+      - ./logs:/app/logs
+      - ./noa.db:/app/noa.db
     restart: unless-stopped
     networks:
       - nestjs-network
-
-volumes:
-  mysql_data:
 
 networks:
   nestjs-network:

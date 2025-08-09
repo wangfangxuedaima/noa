@@ -42,6 +42,7 @@ async function bootstrap() {
       },
       'JWT-auth',
     )
+    .addTag('public', '公共接口 - 无需鉴权')
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
