@@ -1,6 +1,9 @@
 # 生产环境Dockerfile
 FROM node:18-alpine
 
+# 安装构建依赖
+RUN apk add --no-cache python3 make g++ gcc
+
 # 设置工作目录
 WORKDIR /app
 
