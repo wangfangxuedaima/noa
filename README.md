@@ -2,6 +2,10 @@
 
 基于 NestJS 的中小项目 API 服务，包含 JWT 登录、角色控制、Swagger 文档、统一响应格式和基础 CRUD 功能。
 
+## 说明
+
+>本项目基于 [CloudBase AlToolKit ](https://docs.cloudbase.net/cli-v1/ai/introduce.html)开发，通过A!提示词和 MCP 协议+云开发，让开发更智能、更高效，支持A1生成全栈代码、一键部署至腾讯云开发(免服务器)、智能日志修复。
+
 ## 功能特性
 
 - ✅ JWT 身份认证
