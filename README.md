@@ -4,7 +4,7 @@
 
 ## 说明
 
->本项目基于 [CloudBase AlToolKit ](https://docs.cloudbase.net/cli-v1/ai/introduce)开发，通过A!提示词和 MCP 协议+云开发，让开发更智能、更高效，支持A1生成全栈代码、一键部署至腾讯云开发(免服务器)、智能日志修复。
+>本项目基于 [CloudBase AlToolKit ](https://docs.cloudbase.net/cli-v1/ai/introduce)开发，通过AI提示词和 MCP 协议+云开发，让开发更智能、更高效，支持AI生成全栈代码、一键部署至腾讯云开发(免服务器)、智能日志修复。
 
 ## 功能特性
 
